@@ -14,8 +14,8 @@ classifiers = [
 ]
 dependencies = [
     "numpy",
-    "torch==2.8.0",
-    "torchaudio==2.8.0",
+    "torch>=2.8.0",
+    "torchaudio>=2.8.0",
     "transformers==5.19.0",
     "hydra-core>=1.3.2",
     "natsort>=8.4.0",
@@ -26,15 +26,15 @@ dependencies = [
     "loguru>=0.6.0",
     "pyrootutils>=1.0.4",
     "resampy>=0.4.3",
-    "einx[torch]==0.2.2",
+    "einx[torch]>=0.2.2",
     "pydub",
     "pyaudio",
-    "modelscope==1.17.1",
+    "modelscope>=1.17.1",
     "opencc-python-reimplemented==0.1.7",
     "silero-vad",
     "ormsgpack",
     "tiktoken>=0.8.0",
-    "pydantic==2.9.2",
+    "pydantic>=2.9.2",
     "cachetools",
     "descript-audio-codec",
     "safetensors",
@@ -44,23 +44,23 @@ dependencies = [
 
 [project.optional-dependencies]
 stable = [
-    "torch==2.8.0",
+    "torch>=2.8.0",
     "torchaudio",
 ]
 cpu = [
-  "torch==2.8.0",
+  "torch>=2.8.0",
   "torchaudio",
 ]
 cu126 = [
-  "torch==2.8.0",
+  "torch>=2.8.0",
   "torchaudio",
 ]
 cu128 = [
-  "torch==2.8.0",
+  "torch>=2.8.0",
   "torchaudio",
 ]
 cu129 = [
-  "torch==2.8.0",
+  "torch>=2.8.0",
   "torchaudio",
 ]
 
@@ -117,7 +117,7 @@ explicit = true
 requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
-packages = ["fish_speech", "tools"]
+[tool.setuptools.packages.find]
+include = ["fish_speech*", "tools*"]
 
 [tool.setuptools_scm]
