@@ -120,4 +120,7 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools.packages.find]
 include = ["fish_speech*", "tools*"]
 
+[tool.setuptools.package-data]
+fish_speech = ["configs/*.yaml"]
+
 [tool.setuptools_scm]
